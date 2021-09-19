@@ -1,0 +1,32 @@
+.ham{
+    background-color: white;
+    width: 30px;
+    margin: 2px;
+    height: 6px;
+    border-radius:30px;
+    cursor: pointer;
+}
+
+.hamburger{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 2;
+}
+@media only screen and ( max-width:700px ){
+    .ham{
+        background-color: white;
+        width: 40px;
+        margin: 2px;
+        height: 6px;
+        border-radius:30px;
+        /* display: none; */
+    }
+    
+    .hamburger{
+        position: absolute;
+        top: 1em;
+        left: 1em;
+    }
+    
+}
