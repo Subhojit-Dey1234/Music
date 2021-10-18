@@ -1,11 +1,14 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import HamBurger from "./components/HamBurger";
 import SideLayout from "./Layouts/sideLayout";
 import MusicList from "./components/MusicList";
 
 function App() {
 	const [show, setShow] = React.useState(false);
+	useEffect(()=>{
+		document.title = "Music Player"
+	})
 	return (
 		<div>
 			<div

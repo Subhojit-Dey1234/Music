@@ -3,11 +3,21 @@
     width: 50%;
     height: 30vh;
     position: relative;
-    top: 15vh;
     left: 50vw;
     transform: translateX(-50%);
 }
-
+.list-covertart{
+    width: 35%;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+.player{
+    position: relative;
+    top: 10vh;
+}
 .player-button{
     position: relative;
     top: 30vh;
@@ -26,40 +36,93 @@
 }
 
 .music{
+    position: relative;
     width: 13em;
-    height: 10em;
+    padding: 10px;
+    height: fit-content;
     border-radius: 20px;
     margin: 1.1em;
     cursor: pointer;
     transition: transform 0.1s;
+    overflow: hidden;
+}
+
+.music span{
+    width: fit-content;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* width: 100px;
+    height: 100px; */
+    pointer-events: none;
+    border-radius: 50%;
+    animation: hover-effect 0.5s ease-in;
 }
 
 .music:hover{
     transform: scale(1.1);
 }
 .player-play{
-    position: relative;
-    color: black;
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    left: 50%;
+    background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,37,174,1) 0%, rgba(241,147,55,1) 53.4%, rgba(250,237,56,1) 99.5% );
+    color: white;
+    width: 10em;
+    height: 4em;
+    border-radius: 60px;
+    /* left: 50%; */
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-    /* top: 15vh; */
+    
 }
-.player-back{
+.player-ripple{
     /* background-color: rebeccapurple; */
-    width: 50%;
+    /* width: 100%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     position: relative;
-    left: 50%;
-    top: 15vh;
-    transform: translateX(-50%);
+    width: auto;
+    height: fit-content;
+    border-radius: 60px;
+    overflow: hidden;
+    /* top: 15px; */
+}
+.player-ripple span{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%,-50%);
+    animation: click-effect 0.5s ease-in;
+    border-radius: 50%;
+    pointer-events: none;
 }
 
-/*style={{color:'white',paddingTop:"6vh",fontSize:"8em",backgroundColor:"#ffffff38",borderRadius:"30px"}}*/
+@keyframes click-effect {
+
+    0%{
+        width: 0;
+        height: 0%;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+    }
+    
+}
+@keyframes hover-effect {
+
+    0%{
+        width: 0;
+        height: 0%;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+    }
+    
+}
+
 .loader{
+    position: relative;
+    top: 8vh;
     width: 50%;
     color:white;
     padding-top: 12.5vh;
@@ -92,5 +155,13 @@
 
     .list-name{
         font-size: 14px !important;
+    }
+    .player-play{
+        width: 7em;
+        height: 4em;
+        font-size: 10px;
+    }
+    .volume{
+        width: 50% !important;
     }
 }
